@@ -37,7 +37,7 @@ body {
     transform: scaleX(-1);
 }
 
-.painel {
+.painel-esquerdo {
     position: absolute;
     width: 190px;
     padding: 10px;
@@ -46,6 +46,19 @@ body {
     background-color: #fff;
     opacity: 0.7;
     left: 0px;
+}
+
+.painel-direito {
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+    right: 0px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .vidas {

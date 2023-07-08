@@ -1,14 +1,17 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 15
+var tempo = 30
+var pontos = 0
 
 var criaMosquitoTempo = 1500
 
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
-if(nivel === 'normal') {
+if(nivel === 'facil') {
+    criaMosquitoTempo = 2500
+} else if(nivel === 'normal') {
     criaMosquitoTempo = 1500
 } else if(nivel === 'dificil') {
     criaMosquitoTempo = 1000
@@ -71,8 +74,12 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+
     mosquito.onclick = function() {
+        
+        pontos++
         this.remove()
+        document.querySelector('#pontos').innerHTML = pontos
     }
 
     document.body.appendChild(mosquito)

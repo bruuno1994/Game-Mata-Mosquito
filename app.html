@@ -9,7 +9,7 @@
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
 
-    <div class="painel">
+    <div class="painel-esquerdo">
         <div class="vidas">
             <img id="v1" src="img/coracao_cheio.png">
             <img id="v2" src="img/coracao_cheio.png">
@@ -21,7 +21,12 @@
         </div>
     </div>
 
+    <div class="painel-direito">
+            Pontuação: <span id="pontos"></span>
+    </div>
+    
     <script>
+
         document.getElementById('cronometro').innerHTML = tempo
 
         var criaMosquito = setInterval(function() {
